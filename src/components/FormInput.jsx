@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class FormInput extends React.Component {
   render() {
@@ -14,5 +15,13 @@ class FormInput extends React.Component {
     );
   }
 }
+
+FormInput.propTypes = {
+  type: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  placeHolder: PropTypes.string.isRequired,
+};
 
 export default FormInput;

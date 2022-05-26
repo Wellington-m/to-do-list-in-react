@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import FormInput from '../components/FormInput';
 
 class Login extends React.Component {
@@ -54,5 +55,9 @@ class Login extends React.Component {
     );
   }
 }
+
+Login.propTypes = {
+  history: PropTypes.shape().isRequired,
+};
 
 export default Login;
